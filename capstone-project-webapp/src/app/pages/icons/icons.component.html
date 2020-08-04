@@ -1,0 +1,54 @@
+<div class="row">
+  <div class="col-md-6">
+    <h4>Predict Four</h4>
+    <p>This will predict based on 4 classes on which the model was trained</p>
+    <ul>
+      <li>Dropping</li>
+      <li>Holding</li>
+      <li>Poking</li>
+      <li>Tearing</li>
+    </ul>
+  </div>
+  <div class="col-md-6">
+    <h4>Predict Nine</h4>
+    <p>This will predict based on 9 classes on which the model was trained</p>
+    <ul>
+      <li>Dropping</li>
+      <li>Holding</li>
+      <li>Poking</li>
+      <li>Tearing</li>
+      <li>Moving</li>
+      <li>Pouring</li>
+      <li>Picking</li>
+      <li>Showing</li>
+      <li>Putting</li>
+    </ul>
+  </div>
+</div>
+<div class="row">
+  <div class="col-lg-4 col-md-8 col-sm-8" *ngFor="let vid_data of videoList">
+    <div class="card card-stats">
+      <div class="card-body ">
+        <vg-player>
+          <video [vgMedia]="media" #media preload="auto" controls>
+            <source src="{{url}}{{vid_data[0]}}" type="video/webm">
+          </video>
+        </vg-player>
+      </div>
+      <div class="card-footer ">
+        <hr>
+        <div class="stats">
+          <i class="fa fa-video-camera"></i>{{vid_data[2]}}
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="btn btn-info float-left" (click)="_predictVideo(vid_data[1], 'four')">Predict Four</div>
+          </div>
+          <div class="col-md-6">
+            <div class="btn btn-info float-right" (click)="_predictVideo(vid_data[1], 'nine')">Predict Nine</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

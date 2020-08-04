@@ -1,0 +1,6 @@
+__pycache__
+capstone
+data/videos
+data/images
+data/trained_models
+venv

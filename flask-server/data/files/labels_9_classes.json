@@ -1,0 +1,11 @@
+{
+"Dropping something":"0",
+"Holding something":"1",
+"Poking something":"2",
+"Tearing something":"3",
+"Moving something": "4",
+"Pouring something": "5",
+"Picking something": "6",
+"Showing something": "7",
+"Putting something": "8"
+}
